@@ -1,13 +1,11 @@
-package br.com.jsn.apigateway;
+package br.com.jsn.jsnservicediscovery;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 //@SpringBootTest
-class ApiGatewayApplicationTests {
+class JsnServiceDiscoveryApplicationTests {
 
-	//@Test
-	void contextLoads() {
-	}
+	
 
 }
