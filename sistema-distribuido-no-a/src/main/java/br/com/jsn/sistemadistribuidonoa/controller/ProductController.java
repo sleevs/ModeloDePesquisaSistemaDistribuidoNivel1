@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.jsn.sistemadistribuidonoa.dto.ProductDto;
-import br.com.jsn.sistemadistribuidonoa.service.MessageProduceService;
+import br.com.jsn.sistemadistribuidonoa.service.ProduceService;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 public class ProductController {
 
     @Autowired
-    MessageProduceService messageProduceService;
+    ProduceService messageProduceService;
 
     
     @GetMapping("/buscar")
@@ -32,8 +32,8 @@ public class ProductController {
     @PostMapping("/novo")
     public ResponseEntity<String> novoPedido(@RequestBody List<ProductDto> request){
 
-      // String result = messageProduceService.solicitarProduto(request);
-        return ResponseEntity.ok(" PRODUTO SOLICITADO" + request  );
+        String result = messageProduceService.solicitarProduto(request);
+        return ResponseEntity.ok(" PRODUTO SOLICITADO : " + result  );
     }
     
 }
