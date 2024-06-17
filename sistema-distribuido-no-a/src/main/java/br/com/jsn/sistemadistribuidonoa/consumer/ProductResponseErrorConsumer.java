@@ -21,6 +21,7 @@ public class ProductResponseErrorConsumer {
        String result = String.valueOf(message);
 
        produceService.erroRequestProduct(result);
+       System.out.println("MENSAGEM DE ERRO RECEBIDA " +result);
     }
     
 }
