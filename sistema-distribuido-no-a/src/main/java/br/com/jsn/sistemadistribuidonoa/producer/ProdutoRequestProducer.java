@@ -6,9 +6,11 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
 import br.com.jsn.sistemadistribuidonoa.dto.ProductDto;
 
-@Component
+@Service
 public class ProdutoRequestProducer {
 
     @Autowired
@@ -19,17 +21,12 @@ public class ProdutoRequestProducer {
     private String productRequestRouteKey;
 
 
-    
-
-
-
-
-
     public void solicitarProduto(List<ProductDto> lista){
 
         rabbitTemplate.convertAndSend(productRequestExchange,
         productRequestRouteKey,
         lista.toString());
+        System.out.println("MENSAGEM ENVIADA " +lista);
        
     }
 

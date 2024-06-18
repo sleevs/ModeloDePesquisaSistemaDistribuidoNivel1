@@ -4,8 +4,10 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+
+@Service
 public class OrderResponseSuccessProducer {
    
 
@@ -22,6 +24,7 @@ public class OrderResponseSuccessProducer {
         rabbitTemplate.convertAndSend(produtoResponseSuccessExchange,
         produtoResponseSuccessExchange,
         mensagem);
+        System.out.println("GERARA MENSAGEM DE SUCESSO PARA O PRODUTO " + mensagem);
         
        
     }
