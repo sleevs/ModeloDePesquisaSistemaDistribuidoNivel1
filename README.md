@@ -8,3 +8,5 @@ O microserviço é um time especializado no mundo do software que cuida de taref
 Microserviços são um subset de uma Sistema Distribuído - são pequenos , e os serviços se comunicam independentemente na rede.
 Microserviços são flexíveis e escaláveis mas requer cuidado no design do projeto para resolver os desafios 
 da sua crescente complexidade devido a muitos serviços independentes e o riscos de segurança de cada novo serviço.
+
+![alt text](https://github.com/sleevs//ModeloDePesquisaSistemaDistribuidoNivel1/blob/master/ModeloSistemaDistribuido_microservice.drawio.png?raw=true)
